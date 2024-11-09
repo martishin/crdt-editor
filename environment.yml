@@ -62,7 +62,6 @@ dependencies:
   - yaml=0.2.5
   - zlib=1.2.13
   - pip:
-      - crdt-lww==0.1.0
       - maturin==1.7.4
       - semantic-version==2.10.0
       - setuptools-rust==1.10.2
