@@ -1,5 +1,4 @@
-use crdt_lww::LWWElementDictionary;
-use crdt_lww::Timestamp;
+use crdt_lww::crdt::{LWWElementDictionary, Timestamp};
 use std::sync::Arc;
 use std::thread;
 use std::thread::sleep;
@@ -134,7 +133,8 @@ fn test_concurrent_access() {
     let mut handles = Vec::with_capacity(num_threads);
 
     for i in 0..num_threads {
-        let dict_clone = Arc::clone(&dict);
+        let dict_clone: Arc<LWWElementDictionary<String, String>> = Arc::clone(&dict);
+
         let key_add = format!("key_add_{}", i);
         let key_remove = format!("key_remove_{}", i);
         let value = format!("value_{}", i);
@@ -175,7 +175,8 @@ fn test_concurrent_adds_and_removes_same_key() {
     let mut handles = Vec::with_capacity(num_threads * 2);
 
     for i in 0..num_threads {
-        let dict_clone = Arc::clone(&dict);
+        let dict_clone: Arc<LWWElementDictionary<String, String>> = Arc::clone(&dict);
+
         let key_clone = key.clone();
         let value = format!("value_{}", i);
         let ts = Timestamp::now();
@@ -185,7 +186,8 @@ fn test_concurrent_adds_and_removes_same_key() {
         });
         handles.push(handle_add);
 
-        let dict_clone = Arc::clone(&dict);
+        let dict_clone: Arc<LWWElementDictionary<String, String>> = Arc::clone(&dict);
+
         let key_clone = key.clone();
         let ts = Timestamp::now();
 
