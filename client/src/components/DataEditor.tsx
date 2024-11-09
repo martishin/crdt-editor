@@ -36,38 +36,57 @@ const DataEditor: React.FC = () => {
   const handleRemove = () => sendMessage("remove", key)
 
   return (
-    <div className="app-container">
-      <h2>CRDT Editor</h2>
-      <div className="status">
-        <span className="status-label">Status:</span>{" "}
-        <span className={isConnected ? "connected" : "disconnected"}>
-          {isConnected ? "Connected" : "Disconnected"}
-        </span>
-      </div>
+    <>
+      <div className="app-container">
+        <h2>CRDT Editor</h2>
+        <div className="status">
+          <span className="status-label">Status:</span>{" "}
+          <span className={isConnected ? "connected" : "disconnected"}>
+            {isConnected ? "Connected" : "Disconnected"}
+          </span>
+        </div>
 
-      <div className="form">
-        <input type="text" placeholder="Key" value={key} onChange={(e) => setKey(e.target.value)} />
-        <input
-          type="text"
-          placeholder="Value"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-      </div>
-      <div className="form">
-        <button onClick={handleRemove}>Remove</button>
-        <button onClick={handleAdd}>Set</button>
-      </div>
+        <div className="form">
+          <input
+            type="text"
+            placeholder="Key"
+            value={key}
+            onChange={(e) => setKey(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Value"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          />
+        </div>
+        <div className="form">
+          <button onClick={handleRemove}>Remove</button>
+          <button onClick={handleAdd}>Set</button>
+        </div>
 
-      <h3>Data</h3>
-      <div className="messages">
-        {Object.entries(data).map(([key, value]) => (
-          <div key={key} className="message-item">
-            <strong>{key}</strong>: {value}
-          </div>
-        ))}
+        <h3>Data</h3>
+        <div className="messages">
+          {Object.entries(data).map(([key, value]) => (
+            <div key={key} className="message-item">
+              <strong>{key}</strong>: {value}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      <footer className="footer">
+        <p>
+          View the CRDT algorithm source code on{" "}
+          <a
+            href="https://github.com/martishin/react-python-rust-crdt-editor/blob/main/crdt/src/crdt.rs"
+            target="_blank"
+            style={{ color: "#888" }}
+          >
+            GitHub
+          </a>
+        </p>
+      </footer>
+    </>
   )
 }
 

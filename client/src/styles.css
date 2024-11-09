@@ -96,3 +96,15 @@ button:hover {
 .message-item:last-child {
   border-bottom: none;
 }
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
+.footer a {
+  color: #888;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
