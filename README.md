@@ -1,4 +1,4 @@
-# CRDT WebSocket Editor
+# Collaborative CRDT Editor
 A WebSocket-based server implemented in Python with a Rust-backed CRDT (Conflict-free Replicated Data Type) functionality, providing real-time data synchronization and persistence. The server enables clients to connect, add, update, and remove key-value pairs, with all operations broadcast to connected clients.
 
 [Check out the live demo here!](https://crdt.martishin.com/)
