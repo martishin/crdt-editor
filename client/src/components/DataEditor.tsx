@@ -60,7 +60,7 @@ const DataEditor: React.FC = () => {
             onChange={(e) => setValue(e.target.value)}
           />
         </div>
-        <div className="form">
+        <div className="buttons">
           <button onClick={handleRemove}>Remove</button>
           <button onClick={handleAdd}>Set</button>
         </div>

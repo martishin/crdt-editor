@@ -29,6 +29,7 @@ h2 {
 }
 
 h3 {
+  margin-bottom: 0.5rem;
   color: #333;
 }
 
@@ -51,6 +52,13 @@ h3 {
 }
 
 .form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  justify-content: flex-end;
+}
+
+.buttons {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
