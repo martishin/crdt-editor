@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
+import { getWsApiUrl } from "../config.ts"
 
-const WS_URL = "ws://localhost:8000/ws"
+const WS_URL = getWsApiUrl()
 
 type Message = {
   action: string
