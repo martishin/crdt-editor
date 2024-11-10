@@ -76,7 +76,7 @@ const DataEditor: React.FC = () => {
       </div>
       <footer className="footer">
         <p>
-          View the CRDT algorithm source code on{" "}
+          Check the CRDT algorithm source code on{" "}
           <a
             href="https://github.com/martishin/react-python-rust-crdt-editor/blob/main/crdt/src/crdt.rs"
             target="_blank"
