@@ -6,8 +6,8 @@ A WebSocket-based server implemented in Python with a Rust-backed CRDT (Conflict
 <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTQ2bjIybDJ1cWN1dWlud3dmOHFnOGR6MmhrNTdjYmR1eHpnaWxjaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CxGDTYaEOq1vVKUEMe/giphy.gif" width="700"/>
 
 ## Features
-* Blazingly Fast & Reliable CRDT - Last-Write-Wins (LWW) Element Dictionary for conflict resolution  
-* Real-Time Synchronization - Any changes to data are instantly reflected on all connected clients
+* Blazingly fast & reliable CRDT - Last-Write-Wins (LWW) Element Dictionary for conflict resolution  
+* Real-time synchronization - any changes to data are instantly reflected on all connected clients
 
 ## Running Locally
 
