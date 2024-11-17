@@ -12,7 +12,7 @@ A WebSocket-based server implemented in Python with a Rust-backed CRDT (Conflict
 ## Running Locally
 
 ### Prerequisites
-- Python & Conda - for running the serer
+- Python & Conda - for running the server
 - Node.js & npm - for running the React client
 - Rust - for building the CRDT library
 
